@@ -38,10 +38,6 @@ jobs:
         working-directory: oda-ca-docs/doc
         run: |
           pip install sphinx sphinx_rtd_theme
-      - name: Sphinx build
-        working-directory: oda-ca-docs/doc
-        run: |
-          sphinx-build . _build
       - name: Sphinx build debug 1
         working-directory: oda-ca-docs/doc
         run: |
@@ -54,6 +50,10 @@ jobs:
         working-directory: oda-ca-docs/doc
         run: |
           ls ../../oda-ca/controllers
+      - name: Sphinx build
+        working-directory: oda-ca-docs/doc
+        run: |
+          sphinx-build . _build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
