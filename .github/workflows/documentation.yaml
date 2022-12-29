@@ -19,6 +19,10 @@ jobs:
         with:
            repository: tmforum-oda/oda-component-ctk
       - uses: actions/setup-python@v2
+      - name: debug-1
+        run: ls
+      - name: debug-2
+        run: pwd
       - name: Install dependencies
         working-directory: doc
         run: |
