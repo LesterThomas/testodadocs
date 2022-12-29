@@ -35,11 +35,11 @@ jobs:
         run: pwd
         working-directory: oda-ca-docs/doc
       - name: Install dependencies
-        working-directory: oda-ca-docs/doc
+        working-directory: oda-ca-docs
         run: |
           pip install sphinx sphinx_rtd_theme
       - name: Sphinx build
-        working-directory: oda-ca-docs/doc
+        working-directory: oda-ca-docs
         run: |
           sphinx-build doc _build
       - name: Deploy
