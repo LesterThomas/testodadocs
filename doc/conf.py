@@ -80,7 +80,7 @@ shutil.copy2('../../oda-ca/controllers/apiOperatorIstio/README.md', './caSource/
 shutil.copy2('../../oda-ca/controllers/apiOperatorIstio/sequenceDiagrams/apiOperatorIstio.png', './caSource/controllers/apiOperatorIstio/sequenceDiagrams') 
 shutil.copy2('../../oda-ca/controllers/apiOperatorApig/README.md', './caSource/controllers/apiOperatorApig') 
 shutil.copy2('../../oda-ca/controllers/apiOperatorApig/sequenceDiagrams/apiOperatorApig.png', './caSource/controllers/apiOperatorApig/sequenceDiagrams') 
-shutil.copy2('../../oda-ca/controllers/apiOperatorWSO2/README.md', './caSource/controllers/apiOperatorWSO2') 
+shutil.copy2('../../oda-ca/controllers/apiOperatorWSO2/readme.md', './caSource/controllers/apiOperatorWSO2') 
 shutil.copy2('../../oda-ca/controllers/securityController/README.md', './caSource/controllers/securityController') 
 shutil.copy2('../../oda-ca/controllers/securityController/sequenceDiagrams/securitySequenceKeycloak.png', './caSource/controllers/securityController/sequenceDiagrams') 
 shutil.copy2('../../oda-ca/controllers/securityController/sequenceDiagrams/securitySequenceKeycloakDetailed.png', './caSource/controllers/securityController/sequenceDiagrams') 
