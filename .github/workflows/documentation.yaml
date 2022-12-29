@@ -6,29 +6,34 @@ jobs:
     steps:
       - name: checkout-oda-ca-docs
         uses: actions/checkout@v2
+        with:
+          path: oda-ca-docs
       - name: checkout-oda-ca
         uses: actions/checkout@v2
         with:
-           repository: tmforum-oda/oda-ca
+          repository: tmforum-oda/oda-ca
+          path: oda-ca
       - name: checkout-oda-canvas-charts
         uses: actions/checkout@v2
         with:
-           repository: tmforum-oda/oda-canvas-charts
+          repository: tmforum-oda/oda-canvas-charts
+          path: oda-canvas-charts
       - name: checkout-oda-component-ctk
         uses: actions/checkout@v2
         with:
            repository: tmforum-oda/oda-component-ctk
+           path: oda-component-ctk
       - uses: actions/setup-python@v2
       - name: debug-1
         run: ls
       - name: debug-2
         run: pwd
       - name: Install dependencies
-        working-directory: doc
+        working-directory: oda-ca-docs/doc
         run: |
           pip install sphinx sphinx_rtd_theme
       - name: Sphinx build
-        working-directory: doc
+        working-directory: oda-ca-docs/doc
         run: |
           sphinx-build doc _build
       - name: Deploy
@@ -37,5 +42,5 @@ jobs:
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _build/
+          publish_dir: oda-ca-docs/_build/
           force_orphan: true
