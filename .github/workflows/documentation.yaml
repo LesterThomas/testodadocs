@@ -42,6 +42,18 @@ jobs:
         working-directory: oda-ca-docs/doc
         run: |
           sphinx-build . _build
+      - name: Sphinx build debug 1
+        working-directory: oda-ca-docs/doc
+        run: |
+          pwd
+      - name: Sphinx build debug 2
+        working-directory: oda-ca-docs/doc
+        run: |
+          ls ../../oda-ca
+      - name: Sphinx build debug 3
+        working-directory: oda-ca-docs/doc
+        run: |
+          ls ../../oda-ca/controllers
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
