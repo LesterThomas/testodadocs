@@ -24,32 +24,10 @@ jobs:
            repository: tmforum-oda/oda-component-ctk
            path: oda-component-ctk
       - uses: actions/setup-python@v2
-      - name: debug-1
-        run: ls
-      - name: debug-2
-        run: pwd
-      - name: debug-3
-        run: ls
-        working-directory: oda-ca-docs/doc
-      - name: debug-4
-        run: pwd
-        working-directory: oda-ca-docs/doc
       - name: Install dependencies
         working-directory: oda-ca-docs/doc
         run: |
-          pip install sphinx sphinx_rtd_theme
-      - name: Sphinx build debug 1
-        working-directory: oda-ca-docs/doc
-        run: |
-          pwd
-      - name: Sphinx build debug 2
-        working-directory: oda-ca-docs/doc
-        run: |
-          ls ../../oda-ca
-      - name: Sphinx build debug 3
-        working-directory: oda-ca-docs/doc
-        run: |
-          ls ../../oda-ca/controllers
+          pip install -r requirements.txt
       - name: Sphinx build
         working-directory: oda-ca-docs/doc
         run: |
