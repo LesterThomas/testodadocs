@@ -20,11 +20,11 @@ jobs:
            repository: tmforum-oda/oda-component-ctk
       - uses: actions/setup-python@v2
       - name: Install dependencies
-        working-directory: /home/runner/work/testodadocs/doc
+        working-directory: ./doc
         run: |
           pip install sphinx sphinx_rtd_theme
       - name: Sphinx build
-        working-directory: /home/runner/work/testodadocs/doc
+        working-directory: ./doc
         run: |
           sphinx-build doc _build
       - name: Deploy
@@ -33,5 +33,5 @@ jobs:
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: /home/runner/work/testodadocs/_build/
+          publish_dir: ./_build/
           force_orphan: true
