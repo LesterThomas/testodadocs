@@ -71,7 +71,7 @@ print('Copying README and image files')
 import shutil
 
 # Controllers
-shutil.copy2('../../oda-ca/controllers/README.md', './caSource/controllers') 
+shutil.copy2('../../oda-ca/controllers/readme.md', './caSource/controllers') 
 shutil.copy2('../../oda-ca/controllers/componentOperator/README.md', './caSource/controllers/componentOperator') 
 shutil.copy2('../../oda-ca/controllers/componentOperator/sequenceDiagrams/componentOperator.png', './caSource/controllers/componentOperator/sequenceDiagrams') 
 shutil.copy2('../../oda-ca/controllers/apiOperatorSimpleIngress/README.md', './caSource/controllers/apiOperatorSimpleIngress') 
