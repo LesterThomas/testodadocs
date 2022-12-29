@@ -28,6 +28,12 @@ jobs:
         run: ls
       - name: debug-2
         run: pwd
+      - name: debug-3
+        run: ls
+        working-directory: oda-ca-docs/doc
+      - name: debug-4
+        run: pwd
+        working-directory: oda-ca-docs/doc
       - name: Install dependencies
         working-directory: oda-ca-docs/doc
         run: |
